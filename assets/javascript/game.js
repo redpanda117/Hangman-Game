@@ -127,7 +127,7 @@ document.onkeyup = function(event) {
   }
   else if(lettersOnly.indexOf(letterGuessed) !== -1){
     checkLetters(letterGuessed);
-    console.log("YEP is it a letter")
+    console.log("YEP it's a letter")
   }
 
   roundComplete();
