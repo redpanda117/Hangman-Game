@@ -1,0 +1,32 @@
+html,
+body{
+	height: 100%;
+}
+body{
+	background-image: url(../images/SolarSystem.jpg);
+	background-size: cover;
+}
+h1{
+	margin: 50px;
+	background-color: #3e444c;
+	border-radius: 5px;
+}
+footer{
+	height:50px;
+}
+#ScoreBoard{
+	float: right;
+}
+.container{
+	min-height: 100%;
+	height: auto;
+	height: 100%;
+	margin: 0 auto -50px;
+}
+#title{
+	text-align: center;
+}
+.letter{
+	padding-top: 15px;
+	padding-bottom: 15px;
+}
