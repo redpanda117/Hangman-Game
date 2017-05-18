@@ -77,13 +77,7 @@ function checkLetters(letter) {
     console.log(filledBlanks);
   }
 
-  if (letterInWord){
-    for (i = 0; i < numBlanks; i++) {
-      if (wrongGuesses[i] === letter){
-        alert("Letter has already been guess pick aother letter please.");
-       }
-    }
-  }     
+
   else {
     wrongGuesses.push(letter);
     numGuesses--;
@@ -126,7 +120,12 @@ Start();
 document.onkeyup = function(event) {
   var letterGuessed = String.fromCharCode(event.keyCode).toLowerCase();
   var lettersOnly = abc;
-  if (lettersOnly.indexOf(letterGuessed) !== -1 ){
+  var double = wrongGuesses; 
+
+  if (double.indexOf(letterGuessed) !== -1 ){
+    alert("You already guess this letter please pick a different letter.");
+  }
+  else if(lettersOnly.indexOf(letterGuessed)!==-1){
     checkLetters(letterGuessed);
   }
 
