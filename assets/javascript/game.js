@@ -77,7 +77,6 @@ function checkLetters(letter) {
     console.log(filledBlanks);
   }
 
-
   else {
     wrongGuesses.push(letter);
     numGuesses--;
@@ -124,9 +123,11 @@ document.onkeyup = function(event) {
 
   if (double.indexOf(letterGuessed) !== -1 ){
     alert("You already guess this letter please pick a different letter.");
+    console.log("repeated letter");
   }
-  else if(lettersOnly.indexOf(letterGuessed)!==-1){
+  else if(lettersOnly.indexOf(letterGuessed) !== -1){
     checkLetters(letterGuessed);
+    console.log("YEP is it a letter")
   }
 
   roundComplete();
