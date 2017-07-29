@@ -22,7 +22,7 @@ var txtBlank = document.getElementById("word-blanks");
 var txtwrong = document.getElementById("wrong-guesses");
 var txtwinner = document.getElementById("win-counter");
 var txtloser = document.getElementById("loss-counter");
-var imgHint = document.getElementById("hint");
+
 
 var randomWord = "";
 var lettersInRandomWord = [];
