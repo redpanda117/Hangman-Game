@@ -16,11 +16,13 @@ var abc = [
   "v","w","x","y","z"
 ];
 
+//get things to show on html
 var txtguess = document.getElementById("guesses-left");
 var txtBlank = document.getElementById("word-blanks");
 var txtwrong = document.getElementById("wrong-guesses");
 var txtwinner = document.getElementById("win-counter");
 var txtloser = document.getElementById("loss-counter");
+var imgHint = document.getElementById("hint");
 
 var randomWord = "";
 var lettersInRandomWord = [];
@@ -47,6 +49,7 @@ function Start() {
 
   console.log(randomWord);
 
+
   
   for (var i = 0; i < numBlanks; i++) {
     filledBlanks.push("_");
@@ -58,8 +61,54 @@ function Start() {
   txtBlank.innerHTML = filledBlanks.join(" ");
 
   txtwrong.innerHTML = wrongGuesses.join(" ");
+    
+    images(randomWord);
 }
 
+function images(randomWord){
+   var hint = $("<img>");     
+    if(randomWord === "mercury"){
+    hint.attr("src", "assets/images/Mercury.jpg");
+    hint.addClass("hintPicture");    
+        $("#hint").append(hint);
+        console.log("mercury img");
+}else if(randomWord === "venus"){
+hint.attr("src", "assets/images/venus.jpg");
+$("#hint").append(hint);
+    hint.addClass("hintPicture");
+    console.log("venus img");
+}else if(randomWord === "earth"){
+    hint.attr("src", "assets/images/earth.jpg");
+    hint.addClass("hintPicture");
+    $("#hint").append(hint);
+    console.log("earth img");
+}else if(randomWord === "mars"){
+    hint.attr("src", "assets/images/mars.jpg");
+    hint.addClass("hintPicture");
+    $("#hint").append(hint);
+    console.log("mars img");
+}else if(randomWord === "jupiter"){
+    hint.attr("src", "assets/images/jupiter.jpg");
+    hint.addClass("hintPicture");
+    $("#hint").append(hint);
+    console.log("jupiter img");
+}else if(randomWord === "saturn"){
+    hint.attr("src", "assets/images/saturn.jpg");
+    hint.addClass("hintPicture");
+    $("#hint").append(hint);
+    console.log("saturn img");
+}else if(randomWord === "uranus"){
+    hint.attr("src", "assets/images/uranus.jpg");
+    hint.addClass("hintPicture");
+    $("#hint").append(hint);
+    console.log("uranus img");
+}else{
+    hint.attr("src", "assets/images/neptune.jpg");
+    hint.addClass("hintPicture");
+    $("#hint").append(hint);
+    console.log("neptune img");
+}
+}
 function checkLetters(letter) {
   var letterInWord = false;
   for (i = 0; i < numBlanks; i++) {
@@ -97,7 +146,10 @@ function roundComplete() {
     win++;
 
     txtwinner.innerHTML = win;
+    
+    $("#hint").empty();
     Start();
+    
   }
      
   
@@ -107,6 +159,7 @@ function roundComplete() {
 
     txtloser.innerHTML = lost;
 
+    $("#hint").empty();
     Start();
   }
     console.log("wins" + " " + win);

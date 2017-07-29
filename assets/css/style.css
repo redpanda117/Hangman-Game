@@ -30,3 +30,9 @@ footer{
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
+.hintPicture{
+    height: 400px;
+    width: 400px;
+    display: block;
+    margin: 0 auto;
+}
