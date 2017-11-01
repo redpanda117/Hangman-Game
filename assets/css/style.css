@@ -13,6 +13,7 @@ h1{
 }
 footer{
 	height:50px;
+	text-align: center;
 }
 #ScoreBoard{
 	float: right;
@@ -30,9 +31,6 @@ footer{
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
-.hintPicture{
-    height: 400px;
-    width: 400px;
-    display: block;
-    margin: 0 auto;
+.img-fluid{
+	max-height: 300px;
 }
