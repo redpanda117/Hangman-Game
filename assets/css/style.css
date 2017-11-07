@@ -6,31 +6,58 @@ body{
 	background-image: url(../images/SolarSystem.jpg);
 	background-size: cover;
 }
+h1,
+h3,
+.panel-title,
+p{
+color:#C8C8C8;
+}
+
 h1{
 	margin: 50px;
 	background-color: #3e444c;
 	border-radius: 5px;
 }
+
 footer{
 	height:50px;
 	text-align: center;
 }
+
 #ScoreBoard{
 	float: right;
 }
+
 .container{
 	min-height: 100%;
 	height: auto;
 	height: 100%;
 	margin: 0 auto -50px;
 }
+
 #title{
 	text-align: center;
+
 }
 .letter{
 	padding-top: 15px;
 	padding-bottom: 15px;
 }
+
 .img-fluid{
 	max-height: 300px;
+}
+
+.panel-body{
+	background-color:#2E3338; 
+}
+
+.panel-default > .panel-heading {
+	background-image: linear-gradient(#484e55, #3A3F44 60%, #313539);
+	border-color: #1A1D20;
+}
+
+.panel {
+    border-style: solid;
+	border-color: #1A1D20;
 }
